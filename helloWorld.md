@@ -5,7 +5,7 @@
 print('hello world')
 ```
 ### 这是java语言
-'''java
+```java
 class hello
 {
   public static void mian(String[] args)
@@ -15,4 +15,3 @@ class hello
 }
 ```
 
-ff
