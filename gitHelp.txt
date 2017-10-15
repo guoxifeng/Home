@@ -1,0 +1,58 @@
+sourcetree
+***********************************
+先推送再提交
+提交到远程，推送到本地
+
+界面说明
+	分支代表本地分支
+	
+
+文件想要提交必须先暂存
+
+1. add == 暂存
+2. 推送到远程 == 提交
+**********************************
+git 工作流
+**********************************
+1. 创建版本库
+	a. 本地创建一个用于仓库的文件夹：gitTUT
+	b. 在git中cd到该目录下：cd ~/gitTUT
+	c. 为了记录每一个施加更改的人，添加用户
+		I. git config --global.user.name "guoxifeng"
+		   git config --global.user.email "13193755630@163.com"
+	d. 初始话：git init -- 创建成功
+	
+2. 添加到版本库中：
+	1. 创建文件：touch 1.py
+	2. 添加到版本库中：git add 1.py  -- git add . 提交该文件夹下所有
+	3. 提交改变 -m 更新信心：git commit -m "create 1.py"
+	
+	-- 每次更改1.py文件都需要经历 git add git commit
+	
+3. 推送本地版本到github
+	1. 连接：git remote add origin https://github.com/Home
+	2. 推送本地master分支到origin：git push -u origin master
+	3. 推送本地dev分支到origin：git push -u origin dev
+	
+	4. 本地修改并推送
+		git commit -am "change2"
+		git push -u origin master
+	
+常用git命令：
+	1. ls -a：显示所有文件包括隐藏的文件及文件夹
+	2. touch 1.py：创建文件
+	3. git help：帮助
+	4. git status：查看版本库状态
+		a. On branch master 现在的位置在主分支上
+		
+	5. git log: 更新日志
+	6. git diff：查看本次没有add部分与上次已经commit的文件有何不同
+	7. git diff --cached 查看已经add的部分的更改
+	8. git log --oneline --graph：查看分支
+	9. git branch ：查看当前分支
+	10. git branch dev : 创建dev分支
+	11. git checkout dev : 切换分支到dev上
+	
+	
+	
+	
